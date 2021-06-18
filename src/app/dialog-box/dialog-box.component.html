@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Row Action :: <strong>{{action}}</strong></h1>
+<div mat-dialog-content>
+  <div *ngIf="action != 'Delete'; else elseTemplate">
+    <mat-form-field>
+      <input placeholder="{{action}} OrderDueDate" matInput [(ngModel)]="local_data.OrderDueDate" />
+    </mat-form-field>
+     <mat-form-field>
+      <input placeholder="{{action}} Customerbuyername" matInput [(ngModel)]="local_data.Customerbuyername" />
+    </mat-form-field>
+    <mat-form-field>
+      <input placeholder="{{action}} CustomerAddress" matInput [(ngModel)]="local_data.CustomerAddress"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input placeholder="{{action}} CustomerPhone" matInput [(ngModel)]="local_data.CustomerPhone"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input placeholder="{{action}} OrderTotal" matInput [(ngModel)]="local_data.OrderTotal"/>
+    </mat-form-field>
+    
+  </div>
+  
+  <ng-template #elseTemplate>
+    Sure to delete <b>{{local_data.OrderNumber}}</b>?
+
+  </ng-template>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
