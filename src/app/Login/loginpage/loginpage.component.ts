@@ -48,11 +48,9 @@ export class LoginpageComponent implements OnInit {
     
       onSubmit=function(user){
         console.log(user);
-        // this.userService.createUser(this.form.value)
-        // .subscribe( data => {
+
           this.router.navigate(['/oders']);
-         // this.showMsg= true;
-        // });
+     
       }
 }
 class MyErrorStateMatcher implements ErrorStateMatcher {
