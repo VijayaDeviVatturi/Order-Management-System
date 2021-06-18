@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/73658062/122559988-a7c25980-d05d-11eb-91ef-712e86ffdd05.png)
+
 # OrderManagementSystemProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
